@@ -1,7 +1,7 @@
 body {
     /* fonte do texto */
     font-family: Arial, sans-serif;
-    background-color: rgb(23, 0, 65);
+    background-color: rgb(0, 0, 0);
     /* usa modelo FlexBox, conceito de caixa para posicionamento */
     display: flex;
     justify-content: center; /* centraliza na horizontal */
@@ -15,9 +15,13 @@ body {
     border-radius: 10px; /* borda */
     text-align: center; /* texto centralizado */
     box-shadow: 0 4px 8px ; /* sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {transform: scale(1.1);
+box-shadow: 0 10px 20px rbga(225, 255, 255, 0.2);
 }
 button {
-    background-color: rgb(127, 247, 153);
+    background-color: rgb(11, 80, 26);
     color: white; 
     border: none;
     /* 10 abaixo e 10 acima e 20 esquerda e 20 direita */
