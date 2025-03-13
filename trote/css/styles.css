@@ -38,3 +38,17 @@ nav a{
 nav a:hover {
     background: #003d82;
 }
+img { 
+    width: 120px;
+    height: auto;
+    margin-right: 20px; /*espaçamento externo de 20px */
+    border-radius: 10px;
+}
+.container{
+ width: 80%; 
+ margin: 20px auto;
+ padding: 20px;
+ border-radius: 10px;
+ background-color: white;
+ text-align: center;
+}
