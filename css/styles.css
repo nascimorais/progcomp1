@@ -21,7 +21,7 @@ body {
 box-shadow: 0 10px 20px rbga(225, 255, 255, 0.2);
 }
 button {
-    background-color: rgb(11, 80, 26);
+    background-color: rgb(0, 0, 0);
     color: white; 
     border: none;
     /* 10 abaixo e 10 acima e 20 esquerda e 20 direita */
