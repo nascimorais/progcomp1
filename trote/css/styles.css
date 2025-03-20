@@ -56,3 +56,28 @@ img {
 td {
     padding: 20px
 }
+table {
+    /* esp. externo de 0 acima e abaixo e automático esq. dir. */
+    margin: 0 auto
+}
+.laranja {
+    background-color: orange
+}
+.azul
+{
+background-color: blue
+}
+.preto
+{
+    background-color: black;
+    color: white;
+}
+.roxo{
+    background-color: purple
+}
+.verde{
+    background-color: green
+}
+.vermelho{
+    background-color: red
+}
