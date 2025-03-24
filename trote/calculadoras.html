@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- indica que o documento é HTML5-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!-- sistema de codificação do português-->
+        <!-- largura da página será a largura do dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cartão de Apresentação </title>
+        <!-- faz referência ao arquivo css -->
+        <!-- rel é para designar o tipo da relação, que é folha de estilo -->
+        <!-- href é a referência do hipertexto -->
+        <link rel="stylesheet" href="css/styles.css"/>    
+        <script src="js/scripts.js"> </script>
+    </head>
+    <body>
+        <header> <!-- cabeçalho do corpo da página-->
+            Trote Solidário - 2025
+    
+    
+        </header>
+        <nav>
+            <div id="links-menu">
+                <a href="index.html">Home</a>
+                <a href="introducao.html">Introdução</a>
+                <a href="objetivo.html">Objetivo</a>
+                <a href="formato.html">Formato</a>
+                <a href="gincana.html">Gincana</a>
+                <a href="integracao.html">Integração</a>
+                <a href="observacoes.html">Observações</a>
+                <a href="calculadoras.html">Calculadoras</a>
+            </div>
+            <img src="imgs/trote_solidario_2025_edited-768x753.jpg" alt="Trote Solidário">
+        </nav>
+        <div class="container"> <!-- divisão lógica de conteúdo -->
+            <img class="foto" src="img/cachorro-salsicha3.jpg" alt="Foto de Perfil"/>
+            <!-- cabeçalho de nível 2-->
+            <h2> Calculadoras de Pontuação </h2>
+            <form> <!-- formulário para entrada de dados de usuário </form> parágrafo -->
+             <div class=campos>
+                <label> Ação Social </label>
+                <input type="number"id="acaoSocial">
+             </div>
+             <div class="campos">
+                <label> Homenagem </label>
+                <input type="number" id="homenagem">
+            <div class="campos">
+            
+                    
+            </div>
+            <div class="campos"> 
+                <button type="buttom" onclick="calcular()">Calcular</button>
+                <label id="resposta"> </label>
+            </div>
+
+             </div>
+             </form>
+
+            
+        </div>
+    </body>
+</html>
