@@ -36,20 +36,33 @@
             <h2> Calculadoras de Pontuação </h2>
             <form> <!-- formulário para entrada de dados de usuário </form> parágrafo -->
              <div class=campos>
-                <label> Ação Social </label>
+                <label> Ação Social (pts): </label>
                 <input type="number"id="acaoSocial">
              </div>
              <div class="campos">
-                <label> Homenagem </label>
+                <label> Homenagem (pts): </label>
                 <input type="number" id="homenagem">
+            </div>
             <div class="campos">
+                <label> Caixas de leite(litros): </label>
+                <input type="number" id="leite"/>
+            </div>
+                <div> 
+                    <label> Kit Alimentação (avulso)</label>
+                    <input type="number" id="kitAvulso"/>
             
-                    
+                </div>
+                <div>
+                    <label>Lata de suplemento (avulso) </label>
+                    <input type="number" id="suplementoAvulso"/>
+                </div>
+                <div class="campos"> 
+                    <button type="button" onclick="calcular()">Calcular </button>
+                    <label id="soma"></label>
+                </div>
             </div>
-            <div class="campos"> 
-                <button type="buttom" onclick="calcular()">Calcular</button>
-                <label id="resposta"> </label>
-            </div>
+            
+
 
              </div>
              </form>
