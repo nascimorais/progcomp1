@@ -26,62 +26,69 @@ nav {
     gap: 20px;
 }
 
-/* configura o estilo das âncoras que estão dentro do nav */
-nav a{
-    color: white; /* texto branco */
-    text-decoration: nome; /* não faz decoração no link */
-    padding: 10px 15px; /* 10px é acima e abaixo 15 px é esq e dir */
+/* Configura o estilo das âncoras que estão dentro do nav */
+nav a {
+    color: white; /* Texto branco */
+    text-decoration: none; /* Não faz decoração no link */
+    padding: 10px 15px; /* 10px acima e abaixo, 15px à esquerda e à direita */
     font-size: 18px;
-    background:rgb(5, 48, 61);
-    border-radius: 5px; 
+    background: rgb(5, 48, 61);
+    border-radius: 5px;
 }
 nav a:hover {
     background: #003d82;
 }
+
 img { 
     width: 120px;
     height: auto;
-    margin-right: 20px; /*espaçamento externo de 20px */
+    margin-right: 20px; /* Espaçamento externo de 20px */
     border-radius: 10px;
 }
-.container{
- width: 80%; 
- margin: 20px auto;
- padding: 20px;
- border-radius: 10px;
- background-color: white;
- text-align: justify;
- 
+
+.container {
+    width: 80%; 
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: justify;
 }
+
 td {
-    padding: 20px
+    padding: 20px;
 }
+
 table {
-    /* esp. externo de 0 acima e abaixo e automático esq. dir. */
-    margin: 0 auto
+    /* Esp. externo de 0 acima e abaixo e automático esq. dir. */
+    margin: 0 auto;
 }
+
 .laranja {
-    background-color: orange
+    background-color: orange;
 }
-.azul
-{
-background-color: blue
+
+.azul {
+    background-color: blue;
 }
-.preto
-{
+
+.preto {
     background-color: black;
     color: white;
 }
-.roxo{
-    background-color: purple
-}
-.verde{
-    background-color: green
-}
-.vermelho{
-    background-color: red
+
+.roxo {
+    background-color: purple;
 }
 
-.campos{
-margin: 20px;
+.verde {
+    background-color: green;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.campos {
+    margin: 20px;
 }
