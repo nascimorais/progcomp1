@@ -1,38 +1,43 @@
-function calcular() {
-    // Declaração e inicialização da variável soma
-    let soma = 0;
-
-    // Recupera os valores dos campos de entrada e converte para número
-    let acaoSocial = Number(document.getElementById("acaoSocial").value);
-    let homenagem = Number(document.getElementById("homenagem").value);
-    let leite = Number(document.getElementById("leite").value);
-    let kit = Number(document.getElementById("kit").value);
-    let suplemento = Number(document.getElementById("suplemento").value);
-    let equipe = document.getElementById("equipe").value;
-
-    // Soma os valores básicos
-    soma += acaoSocial + homenagem + (2 * leite) + (30 * kit) + (15 * suplemento);
-
-    // Calcula a pontuação extra do Kit baseado na equipe Laranja
-    let pontosKit = 0;
-    if (equipe === "Laranja") {
-        if (kit >= 97) {
-            pontosKit = 5000 + ((kit - 97) * 30);
-        } else if (kit >= 78) {
-            pontosKit = 4000 + ((kit - 78) * 30);
-        } else if (kit >= 49) {
-            pontosKit = 2500 + ((kit - 49) * 30);
-        } else if (kit >= 19) {
-            pontosKit = 1000 + ((kit - 19) * 30);
+function calcular(){
+     // declaração variável sem tipo
+    let soma = 0
+    // recupera o valor da ação social digitado
+    let acaoSocial = document.getElementById("acaoSocial").value
+    soma = soma + Number(acaoSocial)
+    // recupera o valor da homenagem digitado
+    let homenagem = document.getElementById("homenagem").value
+    soma = soma + Number(homenagem)
+    // recupera a qtde de litros de leite
+    let leite = document.getElementById("leite").value
+    soma = soma + (2 * Number(leite))
+    // recupera a qtde de kits 
+    let kit = Number(document.getElementById("kit").value)
+    // recupera a cor da equipe
+    let equipe = document.getElementById("equipe").value
+     // recupera a qtde de latas de suplemento
+    let suplemento = document.getElementById("suplemento").value
+    let pontosKitSupl = 0 // guarda pontuação de kit + supl
+    if (equipe == "Laranja"){
+        // equipe é laranja
+        if (kit >= 97 && suplemento >= 49) {
+            pontosKitSupl = 5000 + ((kit - 97) * 30) + ((suplemento - 49) * 15)
+        }
+        else if (kit >= 78){
+            pontosKitSupl = 4000 + ((kit - 78) * 30)
+        }
+        else if (kit >= 49) {
+            pontosKitSupl = 2500 + ((kit - 49) * 30)
+        }
+        else if (kit >= 19){
+            pontosKitSupl = 1000 + ((kit - 19) * 30)
+        }
+        else {
+            pontosKitSupl = (kit * 30)
         }
     }
-
-    // Exibe a pontuação extra do Kit
-    alert(pontosKit);
-
-    // Adiciona os pontos extras ao total
-    soma += pontosKit;
-
-    // Atualiza o resultado na interface
-    document.getElementById("soma").innerHTML = soma.toFixed(2);
+    alert(pontosKitSupl)
+    soma = soma + pontosKitSupl
+   
+    // devolve o resultado para o HTML
+    document.getElementById("soma").innerHTML = soma.toFixed(2)
 }
