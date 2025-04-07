@@ -16,7 +16,14 @@ function calcular(){
     let equipe = document.getElementById("equipe").value
      // recupera a qtde de latas de suplemento
     let suplemento = document.getElementById("suplemento").value
+    let arroz5kj = document.getElementById("arroz5kj").value
+    let arroz1kg = document.getElementById("arroz1kg")
+    let feijao2kg = document.getElementById("feijao2kg").value
+    let feijao1kg = document.getElementById("feijao1kg").value
+    let macarrao = document.getElementById("macarrao").value
+    let oleo = document.getElementById("oleo").value
     let pontosKitSupl = 0 // guarda pontuação de kit + supl
+
     if (equipe == "Laranja"){
         // equipe é laranja
         if (kit >= 97 && suplemento >= 49) {
