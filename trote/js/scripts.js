@@ -1,50 +1,46 @@
-function calcular(){
-     // declaração variável sem tipo
-    let soma = 0
-    // recupera o valor da ação social digitado
-    let acaoSocial = document.getElementById("acaoSocial").value
-    soma = soma + Number(acaoSocial)
-    // recupera o valor da homenagem digitado
-    let homenagem = document.getElementById("homenagem").value
-    soma = soma + Number(homenagem)
-    // recupera a qtde de litros de leite
-    let leite = document.getElementById("leite").value
-    soma = soma + (2 * Number(leite))
-    // recupera a qtde de kits 
-    let kit = Number(document.getElementById("kit").value)
-    // recupera a cor da equipe
-    let equipe = document.getElementById("equipe").value
-     // recupera a qtde de latas de suplemento
-    let suplemento = document.getElementById("suplemento").value
-    let arroz5kj = document.getElementById("arroz5kj").value
-    let arroz1kg = document.getElementById("arroz1kg")
-    let feijao2kg = document.getElementById("feijao2kg").value
-    let feijao1kg = document.getElementById("feijao1kg").value
-    let macarrao = document.getElementById("macarrao").value
-    let oleo = document.getElementById("oleo").value
-    let pontosKitSupl = 0 // guarda pontuação de kit + supl
+function calcular() {
+    let soma = 0, acaoSocial, homenagem, leite, kit, equipe, suplemento, pontosKitSupl = 0, sangue, pontosSangue = 0;
 
-    if (equipe == "Laranja"){
-        // equipe é laranja
+    // Recupera os valores dos campos e converte para números
+    acaoSocial = Number(document.getElementById("acaoSocial").value);
+    homenagem = Number(document.getElementById("homenagem").value);
+    leite = Number(document.getElementById("leite").value);
+    kit = Number(document.getElementById("kit").value);
+    equipe = document.getElementById("equipe").value;
+    suplemento = Number(document.getElementById("suplemento").value);
+    sangue = Number(document.getElementById("doacaodesangue").value);
+
+    // Calcula os valores iniciais
+    soma += acaoSocial + homenagem + (2 * leite);
+
+    // Calcula pontos do kit e suplemento de acordo com a equipe
+    if (equipe === "Laranja") {
         if (kit >= 97 && suplemento >= 49) {
-            pontosKitSupl = 5000 + ((kit - 97) * 30) + ((suplemento - 49) * 15)
-        }
-        else if (kit >= 78){
-            pontosKitSupl = 4000 + ((kit - 78) * 30)
-        }
-        else if (kit >= 49) {
-            pontosKitSupl = 2500 + ((kit - 49) * 30)
-        }
-        else if (kit >= 19){
-            pontosKitSupl = 1000 + ((kit - 19) * 30)
-        }
-        else {
-            pontosKitSupl = (kit * 30)
+            pontosKitSupl = 5000 + ((kit - 97) * 30) + ((suplemento - 49) * 15);
+        } else if (kit >= 78 && suplemento >= 39) {
+            pontosKitSupl = 4000 + ((kit - 78) * 30) + ((suplemento - 39) * 15);
+        } else if (kit >= 49 && suplemento >= 25) {
+            pontosKitSupl = 2500 + ((kit - 49) * 30) + ((suplemento - 25) * 15);
+        } else if (kit >= 19 && suplemento >= 10) {
+            pontosKitSupl = 1000 + ((kit - 19) * 30) + ((suplemento - 10) * 15);
         }
     }
-    alert(pontosKitSupl)
-    soma = soma + pontosKitSupl
-   
-    // devolve o resultado para o HTML
-    document.getElementById("soma").innerHTML = soma.toFixed(2)
+    soma += pontosKitSupl;
+
+    // Calcula pontos da doação de sangue de acordo com a equipe
+    if (equipe === "Laranja") {
+        pontosSangue = sangue >= 49 ? 2500 + ((sangue - 49) * 20) : (sangue * 20);
+    } else if (equipe === "Preta") {
+        pontosSangue = sangue >= 52 ? 2500 + ((sangue - 52) * 20) : (sangue * 20);
+    } else if (equipe === "Roxa") {
+        pontosSangue = sangue >= 51 ? 2500 + ((sangue - 51) * 20) : (sangue * 20);
+    } else if (equipe === "Verde") {
+        pontosSangue = sangue >= 44 ? 2500 + ((sangue - 44) * 200) : (sangue * 20);
+    } else if (equipe === "Vermelha") {
+        pontosSangue = sangue >= 47 ? 2500 + ((sangue - 47) * 200) : (sangue * 20);
+    }
+    soma += pontosSangue;
+
+    // Exibe o resultado na tela
+    document.getElementById("soma").innerHTML = `Pontuação total: ${soma}`;
 }

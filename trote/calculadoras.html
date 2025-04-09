@@ -1,106 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartão de Apresentação</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-    <script src="js/scripts.js"></script>
-</head>
-<body>
-
-    <header>
-        <h1>Trote Solidário - 2025</h1>
-    </header>
-
-    <nav>
-        <div id="links-menu">
-            <a href="index.html">Home</a>
-            <a href="introducao.html">Introdução</a>
-            <a href="objetivo.html">Objetivo</a>
-            <a href="formato.html">Formato</a>
-            <a href="gincana.html">Gincana</a>
-            <a href="integracao.html">Integração</a>
-            <a href="observacoes.html">Observações</a>
-            <a href="calculadoras.html">Calculadoras</a>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trote Solidário - 2025</title>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <script src="./js/scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- cabeçalho do corpo da página -->
+            Trote Solidário - 2025
+        </header>
+        <nav>
+            <div id="links-menu">
+                <a href="index.html">Home</a>
+                <a href="introducao.html">Introdução</a>
+                <a href="objetivo.html">Objetivo</a>
+                <a href="formato.html">Formato</a>
+                <a href="gincana.html">Gincana</a>
+                <a href="integracao.html">Integração</a>
+                <a href="observacoes.html">Observações</a>
+                <a href="calculadoras.html">Calculadoras</a>
+            </div>
+            <img src="images/trote.jpg" alt="Trote Solidário"/>
+        </nav>
+        <div class="container">
+            <h2>Calculadoras de Pontuação</h2>
+            <form>
+                <div class="campos">
+                    <label for="equipe">Selecione a cor da equipe</label>
+                    <select id="equipe">
+                        <option value="Laranja">Laranja</option>
+                        <option value="Preta">Preta</option>
+                        <option value="Roxa">Roxa</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Vermelha">Vermelha</option>
+                    </select>
+                </div>
+                <div class="campos">
+                    <label for="acaoSocial">Ação Social (pts):</label>
+                    <input type="number" id="acaoSocial">
+                </div>
+                <div class="campos">
+                    <label for="homenagem">Homenagem (pts):</label>
+                    <input type="number" id="homenagem">
+                </div>
+                <div class="campos">
+                    <label for="leite">Caixas de leite (litros):</label>
+                    <input type="number" id="leite">
+                </div>
+                <div class="campos">
+                    <label for="kit">Kit Alimentação:</label>
+                    <input type="number" id="kit">
+                </div>
+                <div class="campos">
+                    <label for="suplemento">Lata de suplemento:</label>
+                    <input type="number" id="suplemento">
+                </div>
+                <div class="campos">
+                    <label for="doacaodesangue">Doação de Sangue</label>
+                    <input type="number" id="doacaodesangue">
+                </div>
+                <div class="campos">
+                    <label for="arroz5kg">Arroz (5 kg)</label>
+                    <input type="number" id="arroz5kg">
+                </div>
+                <div class="campos">
+                    <label for="arroz1kg">Arroz (1 kg)</label>
+                    <input type="number" id="arroz1kg">
+                </div>
+                <div class="campos">
+                    <label for="feijao2kg">Feijão (2 Kg)</label>
+                    <input type="number" id="feijao2kg">
+                </div>
+                <div class="campos">
+                    <label for="feijao1kg">Feijão (1 Kg)</label>
+                    <input type="number" id="feijao1kg">
+                </div>
+                <div class="campos">
+                    <label for="macarrao">Macarrão (400/500 g)</label>
+                    <input type="number" id="macarrao">
+                </div>
+                <div class="campos">
+                    <label for="oleo">Óleo (900 ml)</label>
+                    <input type="number" id="oleo">
+                </div>
+                <div class="campos">
+                    <button type="button" onclick="calcular()">Calcular</button>
+                    <label id="soma"></label>
+                </div>
+            </form>
         </div>
-        <img src="imgs/trote_solidario_2025_edited-768x753.jpg" alt="Trote Solidário">
-    </nav>
-
-    <div class="container">
-        <img class="foto" src="img/cachorro-salsicha3.jpg" alt="Foto de Perfil"/>
-        <h2>Calculadora de Pontuação</h2>
-        
-        <form>
-            <div>
-                <label for="equipe">Selecione a cor da equipe:</label>
-                <select id="equipe"> 
-                    <option value="Laranja">Laranja</option>
-                    <option value="Preta">Preta</option>
-                    <option value="Roxa">Roxa</option>
-                    <option value="Verde">Verde</option>
-                    <option value="Vermelha">Vermelha</option>
-                </select>
-            </div>
-
-            <div class="campos">
-                <label for="acaoSocial">Ação Social (pts):</label>
-                <input type="number" id="acaoSocial">
-            </div>
-
-            <div class="campos">
-                <label for="homenagem">Homenagem (pts):</label>
-                <input type="number" id="homenagem">
-            </div>
-
-            <div class="campos">
-                <label for="leite">Caixas de leite (litros):</label>
-                <input type="number" id="leite">
-            </div>
-
-            <div class="campos">
-                <label for="kit">Kit Alimentação:</label>
-                <input type="number" id="kit">
-            </div>
-
-            <div class="campos">
-                <label for="suplemento">Lata de suplemento:</label>
-                <input type="number" id="suplemento">
-            </div>
-            <div class="campos">
-                <label>Doação de Sangue</label>
-                <input type="number" id="doacaodesangue">
-            
-            <div class="campos">
-              <label> Arroz (5 kg) </label>
-              <input type="number" id="arroz5kg">
-             
-            <div class="campos">
-                <label> Arroz (1 kg) </label>
-                <input type="number" id="arroz1kg">
-                
-            <div class="campos">
-               <label> Feijao (2 Kg)</label>
-               <input type="number" id="feijao2kg">
-
-            <div class="campos">
-               <label> Feijao (1 Kg)</label>
-               <input type="number" id="feijao1kg">
-            
-           <div class="campos">
-                <label> Macarrao (400/500 g)</label>
-                <input type="number" id="macarrao">   
-                
-            <div class="campos">
-                <label> Óleo (900 ml) </label>
-                <input type="number" id="oleo">    
-
-            <div class="campos">
-                <button type="button" onclick="calcular()">Calcular</button>
-                <label id="soma"></label>
-            </div>
-        </form>
-    </div>
-
-</body>
+    </body>
 </html>
