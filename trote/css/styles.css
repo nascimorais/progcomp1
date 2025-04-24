@@ -2,19 +2,19 @@ body {
     font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     text-align: center;
 }
 
 header {
-    background: green;
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 15px 0; /* espaçamento interno 15px acima e abaixo, 0px à esquerda e à direita */
     font-size: 24px;
 }
 
 nav {
-    background-color: rgb(31, 151, 250);
+    background-color: rgb(10, 7, 150);
     padding: 10px;
     display: flex;
     justify-content: space-between; /* Corrigido: justify-content */
@@ -32,11 +32,11 @@ nav a {
     text-decoration: none; /* Não faz decoração no link */
     padding: 10px 15px; /* 10px acima e abaixo, 15px à esquerda e à direita */
     font-size: 18px;
-    background: rgb(5, 48, 61);
+    background: rgb(19, 95, 121);
     border-radius: 5px;
 }
 nav a:hover {
-    background: #003d82;
+    background: #002857;
 }
 
 img { 

@@ -1,3 +1,3 @@
 function mensagem(){
-    alert ("Você agora está seguindo Felipe Nasci!")
+    alert ("Você agora está seguindo Felipe Nascimento!")
 }
