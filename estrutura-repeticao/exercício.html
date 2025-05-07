@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa de Satisfação</title>
+</head>
+<body>
+    <h1>Pesquisa de Satisfação</h1>
+    <button onclick="pesquisaSatisfacao()">Iniciar Pesquisa</button>
+
+    <script>
+        function pesquisaSatisfacao() {
+            let totalNotas = 0;
+            let satisfeitos = 0;
+            let insatisfeitos = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                let nota = parseFloat(prompt(`Participante ${i}: Digite uma nota de satisfação (0 a 10)`));
+
+                while (isNaN(nota) || nota < 0 || nota > 10) {
+                    nota = parseFloat(prompt(`Nota inválida. Participante ${i}: Digite uma nota válida entre 0 e 10`));
+                }
+
+                totalNotas += nota;
+
+                if (nota >= 8) {
+                    satisfeitos++;
+                } else if (nota < 5) {
+                    insatisfeitos++;
+                }
+            }
+
+            let media = totalNotas / 10;
+
+            alert(
+                `Média das notas: ${media.toFixed(2)}\n` +
+                `Total de satisfeitos: ${satisfeitos}\n` +
+                `Total de insatisfeitos: ${insatisfeitos}`
+            );
+        }
+    </script>
+</body>
+</html>
