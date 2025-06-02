@@ -309,3 +309,23 @@ function exercicio8(){
     alert(idade);
 }
 
+    function exe1() {
+        let vet = [];
+        let pares = [];
+        let impares = [];
+        
+        for (let i = 0; i < 6; i++) {
+            vet.push(Number(prompt(`Informe o ${i + 1}o. número`)));
+        }
+        
+        for (let i = 0; i < 6; i++) {
+            if (vet[i] % 2 === 0) {
+                pares.push(vet[i])
+            } else {
+                impares.push(vet[i])
+            }
+        }
+        
+        alert(`Temos ${pares.lenght} elementos pares: ${pares}`)
+        alert(`Temos ${pares.lenght} elementos ímpares: ${impares}`)
+    }
