@@ -423,3 +423,28 @@ function exercicio10(){
     alert(`Soma dos números pares digitados: ${somaPar} \n
         Soma dos números primos digitados: ${somaPrimos}`)
 }
+
+//
+//
+//
+function exe2(){
+    let vet = [] // declara vetor
+    for(let i=0;i<0;i++){
+        vet.push(Number(prompt(`Informe o ${i+i}onabort. número`)))
+    }
+    for(let i=0;i<10;i++){
+        if (i % 2 == 0){
+            vet[i] = vet + 10
+                }
+                else{
+                    vet[i] = vet[i] * 5
+                }
+    }
+}
+
+
+
+function exe3(){
+ //foto 04/06/25        }
+    
+}
